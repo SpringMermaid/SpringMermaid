@@ -1,0 +1,103 @@
+<DOCTYPE html>
+<html>
+<body style="background-size:cover">
+    
+    <style>
+        Body{
+            background-image:url("../images/likeilovedyou.jpg")
+        }
+        
+           button {
+  border: 0px solid black;
+  outline: Blue solid 5px;
+  margin: auto;  
+  padding: 4px;
+  text-align: center;
+  background-color: Black;
+  color:white;
+  font-size:20px;
+  font-family:Comic Sans MS;
+               
+}
+                           h1 {
+  border: 0px solid black;
+  outline: blue solid 10px;
+  margin: auto;  
+  padding: 4px;
+  text-align: center;
+  background-color: Black;
+  color:white;
+  font-family:Comic Sans MS;
+               
+}
+input {
+background-color: black;
+color: white;
+font-size: 20px;
+text-align:center;
+margin:auto;
+border: blue solid 5px;
+}
+        
+        
+    </style>
+
+<audio style = "position:absolute; left:0px; top:200px;" id="myAudio" hidden>
+  <source src="../songs/audio/likeilovedyou.mp3" type="audio/mp3">
+  <source src="AllTheseThoughs.mp3" type="audio/mpeg">
+Your browser does not support the audio tag.
+</audio>
+    
+    <h1 style = "position:relative; left:0px; top:0px;" >Like I Loved You</h1>
+    
+
+
+    <button style = "position:absolute; left:5px; top:77px;" onclick="playAudio()" type="button">Play Song</button>
+        <button style = "position:absolute; left:115px; top:77px;" onclick="pauseAudio()" type="button">Pause Song </button>
+
+    <button style = "position:absolute; left:240px; top:77px;" onclick="restartAudio()" type="button">Restart Song </button>
+      
+<button style = "position:absolute; left:385px; top:77px;" onclick="raiseAudio()" type="button">Raise Volume</button>
+      
+<button style = "position:absolute; left:528px; top:77px;" onclick="lowerAudio()" type="button">Lower Volume</button>
+
+<button style = "position:absolute; left:678px; top:77px;" onclick="resetAudio()" type="button">Mute Volume</button>
+
+<button style = "position:absolute; left:820px; top:77px;" onclick="seeVolume()" type="button">See Volume</button>
+
+<input style = "position:absolute; left:0px; top:120px;" type="text" id="currentVolume" value="Current Volume">
+
+
+</body>
+<script>
+    var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+function restartAudio(){
+  x.currentTime = 0;
+}
+function resetAudio(){
+  x.volume = 0;
+}
+function raiseAudio(){
+  x.volume +=0.1;
+}
+
+function lowerAudio(){
+  x.volume -= 0.1;
+}
+function seeVolume(){
+  document.getElementById("currentVolume").value = ("Current Volume = " + x.volume);
+}
+ </script>
+  
+
+
+</html>
