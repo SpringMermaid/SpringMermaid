@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-This Repository is just a simple Mp3/Mp4 with a few photos For my Girlfriend
+This Repository is just a simple Mp3/Mp4 with a few photos For my Girlfriend made in HTML
 
 <!--
 **SpringMermaid/SpringMermaid** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
